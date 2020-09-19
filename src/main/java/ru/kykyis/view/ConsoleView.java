@@ -2,12 +2,9 @@ package ru.kykyis.view;
 
 import ru.kykyis.game.Game;
 import ru.kykyis.game.player.AbstractPlayer;
-import java.util.Random;
 
 
 public class ConsoleView {
-    static Random random = new Random();
-    public static String[] variables = {"cъел", "украл", "уничтожил", "сжёг", "забрал", "продал", "выкинул", "сломал"};
 
     public static void newGame() {
         System.out.println("Добро пожаловать в игру 20 спичек.");
@@ -23,7 +20,7 @@ public class ConsoleView {
         inputHere();
     }
     public static void printEndOfTurn(Game game, int value) {
-        System.out.printf("Игрок %s %s спички в количестве %d.\n", game.whoTurns().getName(), variables[random.nextInt(variables.length)], value);;
+        System.out.printf("Игрок %s забрал спички в количестве %d.\n", game.whoTurns().getName(), value);;
     }
     public static void printPlayerName(int number) {
         System.out.printf("Имя игрока %d.\n", number);
